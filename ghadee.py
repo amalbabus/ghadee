@@ -1,7 +1,6 @@
 from tkinter import *
 from datetime import datetime
 import pytz
-print(pytz.all_timezones)
 root = Tk()
 root.title("ghadee")
 root.geometry("300x100")
@@ -21,7 +20,7 @@ def clockdisplay():
                 Label(root, text=countryName[countryCode], background="yellow", width=25).grid(column=j,row=i)
                 Label(root, text=countryCode.strftime("%I:%M %P"), background="yellow").grid(column=j+1,row=i)
                 i+=1
-        Label().after(60000,clockdisplay)
+        Label().after(1000,clockdisplay)
 
 
 clockdisplay()
